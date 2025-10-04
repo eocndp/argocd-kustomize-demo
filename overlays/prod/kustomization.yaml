@@ -1,0 +1,15 @@
+resources:
+  - ../../base
+namePrefix: prod-
+commonLabels:
+  env: prod
+patches:
+  - target:
+      kind: Deployment
+      name: demo
+    patch: |-
+      - op: add
+        path: /spec/template/spec/containers/0/env/-
+        value:
+          name: APP_NAME
+          value: "prod-demo"
