@@ -12,4 +12,4 @@ patches:
         path: /spec/template/spec/containers/0/env/-
         value:
           name: APP_NAME
-          value: "dev-demo"
+          value: "Dev"
